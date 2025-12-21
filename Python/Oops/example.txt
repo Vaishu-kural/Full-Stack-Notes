@@ -1,0 +1,4 @@
+Hello, Python!
+This is a file write example.
+New line added.
+New line added.
