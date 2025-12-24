@@ -1,0 +1,127 @@
+App.jsx
+
+import './App.css'
+
+// normal Function
+// function user() {
+//   return 'vaishu',56,true
+// }
+// console.log(user());
+
+
+let author = 'Vaishu'
+
+let isLogged = true
+
+function App() {
+
+  return (
+    <div className="container">
+      <h1 style={{backgroundColor: "red", color:"white"}}>React JSX</h1>
+
+      <div>
+        <h2>Welcome to React JSX</h2>
+      </div>
+      <label htmlFor="user">User Name:</label>
+      <input id='user' type="text" />
+      <p> {author} </p>
+      {
+        
+        isLogged ? <p>Welcome to Our Website</p> : <p>Please Log In</p>
+        // isLogged && <p>Welcome to Our Website</p>
+        
+      }
+      {/* <br/> */}
+      {/* <button onClick={newFun}>Click Me</button> */}
+    </div>
+    
+  );
+}
+
+export default App
+
+With fragment
+
+import './App.css'
+
+// normal Function
+// function user() {
+//   return 'vaishu',56,true
+// }
+// console.log(user());
+
+
+let author = 'Vaishu'
+
+let isLogged = true
+
+function App() {
+
+  return (
+    <>
+      <h1 style={{backgroundColor: "red", color:"white"}}>React JSX</h1>
+
+      <div>
+        <h2>Welcome to React JSX</h2>
+      </div>
+      <label htmlFor="user">User Name:</label>
+      <input id='user' type="text" />
+      <p> {author} </p>
+      {
+        
+        isLogged ? <p>Welcome to Our Website</p> : <p>Please Log In</p>
+        // isLogged && <p>Welcome to Our Website</p>
+        
+      }
+      {/* <br/> */}
+      {/* <button onClick={newFun}>Click Me</button> */}
+    </>
+    
+  );
+}
+
+export default App
+
+React.Fragment
+
+import React from 'react';
+import './App.css'
+
+// normal Function
+// function user() {
+//   return 'vaishu',56,true
+// }
+// console.log(user());
+
+
+let author = 'Vaishu'
+
+let isLogged = true
+// let isLogged = false
+
+function App() {
+
+  return (
+    <React.Fragment>
+      <h1 style={{backgroundColor: "red", color:"white"}}>React JSX</h1>
+
+      <div>
+        <h2>Welcome to React JSX</h2>
+      </div>
+      <label htmlFor="user">User Name:</label>
+      <input id='user' type="text" />
+      <p> {author} </p>
+      {
+        
+        isLogged ? <p>Welcome to Our Website</p> : <p>Please Log In</p>
+        // isLogged && <p>Welcome to Our Website</p>
+        
+      }
+      {/* <br/> */}
+      {/* <button onClick={newFun}>Click Me</button> */}
+    </React.Fragment>
+    
+  );
+}
+
+export default App

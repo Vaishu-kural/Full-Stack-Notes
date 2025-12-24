@@ -1,0 +1,145 @@
+---------(1)----------
+
+
+import React from 'react'
+
+//event handler function
+function printSomething(){
+    console.log("Hello");
+}
+
+// function printSomething1(user){
+//     console.log("Hello " + user);
+// }
+
+const Content = () => {
+  return (
+    <main>
+    <h1 style={ {backgroundColor:"red", color: "white"} }>Main Content</h1>
+
+    {/* props through pass camel case */}
+    {/* <Button onClick={printSomething}>Click Me!</Button> */}
+    
+    </main>
+  )
+}
+
+export default Content
+
+
+---------(2)----------
+
+
+import React from 'react'
+
+
+
+function printSomething(){
+    console.log("Hello ");
+}
+
+const Content = () => {
+  return (
+    <main>
+    <h1 style={ {backgroundColor:"red", color: "white"} }>Main Content</h1>
+
+    {/* props through pass camel case */}
+    <Button onClick={printSomething()}>Click Me!</Button>
+    
+    </main>
+  )
+}
+
+export default Content
+
+
+---------(3)----------
+
+import React from 'react'
+
+function printSomething1(user){
+    console.log("Hello " + user);
+    
+}
+
+const Content = () => {
+  return (
+    <main>
+    <h1 style={ {backgroundColor:"red", color: "white"} }>Main Content</h1>
+
+    {/* Anonymous function */}
+        <NewButton onClick={ ()=>{ printSomething1("Vaishuu") } }>Duplicate..</NewButton>
+
+    
+    
+    </main>
+  )
+}
+
+export default Content
+
+
+----------(4)-------------
+
+import React from 'react'
+
+//event handler function
+function printSomething(e){
+    console.log(e);
+    //purpose:SyntheticBaseEvent {_reactName: 'onClick', _targetInst: null, type: 'click', nativeEvent: PointerEvent, target: button.sc-bRKDuR.bhAtoB, …}
+    console.log("Hello");
+}
+
+//
+function printSomething(e){
+    console.log(e); // event object
+//     console.log(e.type); // event type
+//     console.log(e.target); // target element
+//     console.log(e.target.innerText); // target element text
+    console.log("Button Clicked");
+}
+
+
+const Content = () => {
+  return (
+    <main>
+    <h1 style={ {backgroundColor:"red", color: "white"} }>Main Content</h1>
+
+    {/* props through pass camel case */}
+    {/* <Button onClick={printSomething}>Click Me!</Button> */}
+    
+    </main>
+  )
+}
+
+export default Content
+
+//Anonymous function
+
+import React from 'react'
+
+function printSomething1(event){
+    console.log(event);
+    console.log("Hello ");
+    console.log(event);
+    console.log(event.target);
+    console.log(event.target.innerText);
+    
+}
+
+const Content = () => {
+  return (
+    <main>
+    <h1 style={ {backgroundColor:"red", color: "white"} }>Main Content</h1>
+
+    {/* Anonymous function */}
+        <NewButton onClick={ (e)=> { printSomething1(e) } }>Duplicate..</NewButton>
+    </main>
+  )
+}
+
+export default Content
+
+above used all functional component - this is stateless component;
+this component used state management hooks concept 
+Hooks ( useState, useReducer, useContext )

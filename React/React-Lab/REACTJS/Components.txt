@@ -1,0 +1,83 @@
+Header
+// same as js function but using jsx syntax
+// Component name and file name: Header.jsx
+// functional component
+
+function Header(props) {
+
+    console.log(props);
+  return (
+    //header - semantic element for header section
+    <header>    
+      <h1>Todo List</h1>
+    </header>
+  );
+}
+//first export the component after creating app.jsx import it there
+export default Header;
+
+Footer
+
+// object create template - class 
+// inheritance extends from React.Component
+// first import react library - to call component methods
+
+import React from 'react';
+
+// from normal javascript class to component class change
+// 1. extend from React.Component
+// 2. render() method to return jsx
+// 3. export the class component
+// 4. console.log(this.props); (property)this is point out- to access props in class component
+class Footer extends React.Component {
+    render() {
+
+        console.log(this.props); 
+
+        return (
+            // footer - semantic element for footer section
+            <footer>
+                <p>© 2025 Todo List App. All rights reserved.</p>
+            </footer>
+        );
+    }
+
+}
+export default Footer;
+
+Content
+
+// ES7 Redux Snippet to create Context API boilerplate
+// rafc - functional component with export default
+//rafce - functional component with export default and props
+// rcc - class component with export default
+
+// component is a object so destructuring used
+// let {id, comp} = user; -- destructuring used
+
+// import React from 'react'
+
+// export const Content = () => {
+//   return (
+//     <div>Content</div>
+//   )
+// }
+
+
+import React, { Component } from 'react'
+
+let  user = {id:1, comp : 'Class Component'};
+
+// console.log(user.comp);
+
+let {id, comp} = user;
+
+export default class Content extends Component {
+  render() {
+    return (
+      <div>Content</div>
+    )
+  }
+}
+
+
